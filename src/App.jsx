@@ -2,11 +2,13 @@ import { useState } from "react";
 
 
 function App() {
-  const [texto, setTexto] = useState("Valor inicial");
+  const [contador, setContador] = useState(0);
 
   return (
     <div>
-      <h1>{texto}</h1>
+      <h1>Contador: {contador}</h1>
+      <button onClick={() => setContador(contador+1)}>Incrementar</button>
+      <button onClick={() => setContador(contador-1)}>Decrementar</button>
     </div>
   );
 }
